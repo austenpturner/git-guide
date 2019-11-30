@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quick Git Guide</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar fixed-top navbar-dark bg-dark navbar-expand-lg">
+        <a class="navbar-brand" href="#">A Quick Git Guide</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item px-2">
+                    <a class="nav-link text-light" href="index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown px-2">
+                    <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Topics
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#what-is-git">What is Git?</a>
+                        <a class="dropdown-item" href="#what-is-github">What is GitHub?</a>
+                        <a class="dropdown-item" href="#repositories">Respositories</a>
+                        <a class="dropdown-item" href="#staging-committing">Staging & Committing</a>
+                        <a class="dropdown-item" href="#pushing-pulling">Pushing & Pulling</a>
+                        <a class="dropdown-item" href="#branches">Branches</a>
+                        <a class="dropdown-item" href="#git-commands">Git Commands</a>
+                    </div>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link text-light" href="#">Git-spiration<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link text-light" href="#">Resources<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link text-light" href="#">About the Author</a>
+                </li>
+                <li class="nav-item px-2">
+                    <button type="button" class="btn btn-dark br-none" data-toggle="modal" data-target="#exampleModal">
+                        Contact
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MODALS -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Please enter your info: </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name: </label>
+                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email: </label>
+                            <input type="email" class="form-control" id="email" placeholder="email@gmail.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message: </label>
+                            <textarea class="form-control" id="message" placeholder="Type your message here.."></textarea>
+                        </div>
+                    </form>
+                    <input class="btn btn-primary" type="submit" data-dismiss="modal" value="Submit">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JUMBOTRON -->
+    <div class="jumbotron text-center mt-4 pb-4">
+        <h1 class="display-3 pb-3">A Quick Guide to Git</h1>
+        <p class="lead px-4">Welcome to a beginner's guide to git! By beginner, I mean this guide is written by a 
+            beginner for a beginner. This page is a work in progress and will also serve as Bootstrap Framework 
+            practice. With that in mind, please join me on my journey as I "commit" to learning Git.</p>
+        <hr class="my-4">
+        <p>Reach out and connect! Feel free to contact me with any questions, comments or concerns.</p>
+        <button type="button" class="btn btn-lg btn-primary mt-2" data-toggle="modal" data-target="#exampleModal">
+            Contact
+        </button>
+    </div>
+
+    <section id="what-is-git" class="container py-3">
+        <h2 class="display-4">What is Git?</h2>
+        <p class="lead">
+            Git is a version control system used by developers. It allows you to track and 
+            record changes you make to your files.
+        </p>
+        <p>
+            When you are working on a project, especially if you're working with a team, it is important 
+            to save different versions of your files as your project progresses. Git is a program you run 
+            on your local machine that allows you to document changes and save versions. This way you can 
+            revert to a previous version if something breaks or you decide you do not like a recent change. 
+            After you make changes you can <a href="#">stage</a> a file and then <a href="#">commit</a> which 
+            will add metadata to your file and save changes to your local machine. Then it is important 
+            to also move the updated file to a place where other developers can access it, such as GitHub. 
+            You can use Git to <a href="#">push</a> your file up to a <a href="#">repository</a> on 
+            GitHub. Git also allows you to <a href="#">pull</a> files from GitHub back to your local 
+            machine.
+        </p>
+        <p>
+            <a class="badge badge-info text-white" href="http://git-scm.com" target="_blank">Git</a> has a website 
+            where you can learn more. Download Git and start practicing! 
+        </p>
+    </section>
+
+    <hr>
+
+    <section id="what-is-github" class="container py-3">
+        <h2 class="display-4">What is GitHub?</h2>
+        <p class="lead">
+            GitHub is an open-sourced platform used by developers to host projects, store different 
+            versions and collaborate. 
+        </p>
+        <p>
+            While Git allows you to track changes on your local machine, GitHub is a place you can store various 
+            versions of your project where other developers can access them. GitHub is open source, meaning it 
+            is free to use and open to the public. Why might you want to put your work on a platform where other 
+            developers can see it and use it? It's good to give back to the community! Share code, contribute 
+            ideas and give and receive feedback.
+        </p>
+        <p>
+            Check out <a class="badge badge-info text-white" href="http://github.com" target="_blank">GitHub</a>! 
+            Make an account and start looking at other developers code and think about sharing your own. 
+            Keep in mind, employers will look at your GitHub account. They want to see what you've done and 
+            what you're working on!
+        </p>
+    </section>
+
+    <hr>
+
+    <section id="repositories" class="container py-3 mb-4">
+        <h2 class="display-4">Repositories</h2>
+        <p class="lead">
+            A repository is a fancy name for a folder. However, it's not just a regular folder. A repository will 
+            not only store your files for your project but will also track the changes made to those files. 
+        </p>  
+        <p> 
+            You'll often hear developers call them a "repo" for short. On your local machine a repo will have 
+            a .git folder where it will store the tracked changes. You can create a new repo on GitHub by 
+            selecting the <span class="badge badge-success text-white">New</span> button. You will need to name 
+            your repo and then write a short description. It is important to make your repo public so other 
+            developers, team memebers or future employers can see your work. Also make sure to check the 
+            "initialize this repository with a README" box. This will allow you to clone the new repo and 
+            download it to your local device. You can use Git for this. On your computer, open Git and type 
+            the command <kbd>git clone</kbd> followed by the copied link for your new repo from GitHub. Now 
+            your repo will show up on your own computer as a new folder! 
+        </p>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2019 Austen Turner</p>
+    </footer>
+
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
