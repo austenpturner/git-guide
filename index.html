@@ -29,10 +29,10 @@
                         <a class="dropdown-item" href="#what-is-git">What is Git?</a>
                         <a class="dropdown-item" href="#what-is-github">What is GitHub?</a>
                         <a class="dropdown-item" href="#repositories">Respositories</a>
-                        <a class="dropdown-item" href="#staging-committing">Staging & Committing</a>
-                        <a class="dropdown-item" href="#pushing-pulling">Pushing & Pulling</a>
-                        <a class="dropdown-item" href="#branches">Branches</a>
                         <a class="dropdown-item" href="#git-commands">Git Commands</a>
+                        <a class="dropdown-item" href="#making-files">Making Files</a>
+                        <a class="dropdown-item" href="#saving-changes">Saving Changes</a>
+                        <a class="dropdown-item" href="#branches">Branches</a>
                     </div>
                 </li>
                 <li class="nav-item px-2">
@@ -108,16 +108,16 @@
             to save different versions of your files as your project progresses. Git is a program you run 
             on your local machine that allows you to document changes and save versions. This way you can 
             revert to a previous version if something breaks or you decide you do not like a recent change. 
-            After you make changes you can <a href="#">stage</a> a file and then <a href="#">commit</a> which 
-            will add metadata to your file and save changes to your local machine. Then it is important 
+            After you make changes you can <a href="#stage">stage</a> a file and then <a href="#commit">commit</a> 
+            which will add metadata to your file and save changes to your local machine. Then it is important 
             to also move the updated file to a place where other developers can access it, such as GitHub. 
-            You can use Git to <a href="#">push</a> your file up to a <a href="#">repository</a> on 
-            GitHub. Git also allows you to <a href="#">pull</a> files from GitHub back to your local 
+            You can use Git to <a href="#push">push</a> your file up to a <a href="#repositories">repository</a> 
+            on GitHub. Git also allows you to <a href="#">pull</a> files from GitHub back to your local 
             machine.
         </p>
         <p>
-            <a class="badge badge-info text-white" href="http://git-scm.com" target="_blank">Git</a> has a website 
-            where you can learn more. Download Git and start practicing! 
+            <a href="http://git-scm.com" target="_blank">Git</a> has a website where you can learn more. 
+            Download Git and start practicing! 
         </p>
     </section>
 
@@ -137,7 +137,7 @@
             ideas and give and receive feedback.
         </p>
         <p>
-            Check out <a class="badge badge-info text-white" href="http://github.com" target="_blank">GitHub</a>! 
+            Check out <a href="http://github.com" target="_blank">GitHub</a>! 
             Make an account and start looking at other developers code and think about sharing your own. 
             Keep in mind, employers will look at your GitHub account. They want to see what you've done and 
             what you're working on!
@@ -150,19 +150,206 @@
         <h2 class="display-4">Repositories</h2>
         <p class="lead">
             A repository is a fancy name for a folder. However, it's not just a regular folder. A repository will 
-            not only store your files for your project but will also track the changes made to those files. 
+            not only store files for your project but will also track the changes made to those files. 
         </p>  
         <p> 
             You'll often hear developers call them a "repo" for short. On your local machine a repo will have 
             a .git folder where it will store the tracked changes. You can create a new repo on GitHub by 
-            selecting the <span class="badge badge-success text-white">New</span> button. You will need to name 
+            selecting the <span class="badge badge-success text-white p-2">New</span> button. You will need to name 
             your repo and then write a short description. It is important to make your repo public so other 
             developers, team memebers or future employers can see your work. Also make sure to check the 
-            "initialize this repository with a README" box. This will allow you to clone the new repo and 
-            download it to your local device. You can use Git for this. On your computer, open Git and type 
-            the command <kbd>git clone</kbd> followed by the copied link for your new repo from GitHub. Now 
-            your repo will show up on your own computer as a new folder! 
+            "initialize this repository with a README" box. This will allow you to 
+            <span class="badge badge-success text-white p-2">Clone or download</span> your new repo to your local 
+            device. You can use Git for this. On your computer, open Git and type the command <kbd>git clone</kbd> 
+            followed by the copied link for your new repo from GitHub. Now your repo will show up on your own 
+            computer as a new folder! 
         </p>
+    </section>
+
+    <hr>
+
+    <section id="git-commands" class="container py-3 mb-4">
+        <h2 class="display-4">Git Commands</h2>
+        <p class="lead">
+            As you begin to use Git there are a few basic commands you should know. You will need to be able to move in and out 
+            of different folders, list the your files in that folder and check the status of your files.
+        </p>
+        <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Command</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr></tr>
+                        <td><kbd>cd ~</kbd></td>
+                        <td>change to root directory</td>
+                    </tr>
+                    <tr>
+                        <td><kbd>cd folder-name</kbd></td>
+                        <td>change to a specific folder</td>
+                    </tr>
+                    <tr>
+                        <td><kbd>cd desktop</kbd></td>
+                        <td>change directory to desktop</td>
+                    </tr>
+                    <tr>
+                        <td><kbd>cd ..</kbd></td>
+                        <td>move up one directory</td>
+                    </tr>
+                    <tr>
+                        <td><kbd>cd ../..</kbd></td>
+                        <td>move up two directories</td>
+                    </tr>
+                    <tr>
+                        <td><kbd>ls</kbd></td>
+                        <td>list files in the current directory</td>
+                    </tr>
+                    <tr>
+                        <td><kbd>git status</kbd></td>
+                        <td>check the status of files in current directory</td>
+                    </tr>
+                    <tr>
+                        <td><kbd>rm index.html<kbd></td>
+                        <td>remove file from current directory</td>
+                    </tr>
+                    <tr>
+                        <td><kbd>tab</kbd></td>
+                        <td>auto complete a command</td>
+                    </tr>
+                    <tr>
+                        <td><kbd>&uarr;</kbd></td>
+                        <td>cycle up through last commands used</td>
+                    </tr>
+                    <tr>
+                        <td><kbd>explorer .<kbd></td>
+                        <td>open folder in file explorer</td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
+
+    <hr>
+
+    <section id="making-files" class="container py-3 mb-4">
+        <h2 class="display-4">Making Files</h2>
+        <p class="lead">
+            Once you have cloned your GitHub repository onto your local machine you can start adding files. You can use Git 
+            commands to make new folders and files inside your repo. 
+        </p>
+        <div class="row pt-3">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-info border-dark text-white pb-1">
+                        <h5 class="card-title">Make a new folder</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            First make sure you are in your desired directory. Then use the make directory command followed by 
+                            a name for the folder. When naming folders do not use spaces. Move into the new folder using the 
+                            change directory command followed by the folder name. 
+                        </p>
+                        <div><kbd>mkdir my-folder</kbd></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-info border-dark text-white pb-1">
+                        <h5 class="card-title">Make a new file</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Once you are in your new folder you can add a new file to the folder using the touch command 
+                            followed by a name for the file. Then if you use the list command to see the new file in your folder. 
+                            You can now start making changes to your new file. 
+                        </p>
+                        <div><kbd>touch index.html</kbd></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="saving-changes" class="container py-3 mb-4">
+        <h2 class="display-4">Saving Changes</h2>
+        <p class="lead">
+            After you have made a few changes to your file you will need to stage the changes, save the new version 
+            as a commit, and then push the new version up to your GitHub repository. 
+        </p>
+        <p>
+            Git keeps track of changes you've made to a file. When you run git status it will list the file as 
+            untracked meaning a new version has not been tracked or saved yet. In order to save the new version 
+            you will first need to stage the file. After you have staged the file use git status again and you 
+            will see the file is now listed under "changes to be committed". Next you will need to commit the 
+            file and a new version of the file will be saved on your local machine. Next you will need to push 
+            the commit up to the master branch on your GitHub repo. This way everyone else can see the changes 
+            you have made. When you push up the file Git will make a unique id that records the push so you can 
+            track the history of the file. 
+        </p>
+
+        <div class="row pt-3">
+            <div class="col-md-6 col-lg-4 mb-2">
+                <div class="card">
+                    <div id="stage" class="card-header bg-info border-dark text-white pb-1">
+                        <h5 class="card-title">Stage</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            After you are done making changes to a file you will want to stage the file. To 
+                            do this enter the add command followed by the name of the file. You will receive 
+                            no output from Git after this command, which is a good thing! That means you 
+                            entered the command correctly.
+                        </p>
+                        <div><kbd>git add index.html</kbd></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-2">
+                <div class="card">
+                    <div id="commit" class="card-header bg-info border-dark text-white pb-1">
+                        <h5 class="card-title">Commit</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Once a file is staged it is ready to be commited. To commit the file use the commit 
+                            command followed by a string in quotes that is a brief message describing the 
+                            purpose of this commit. Afterwards you can check git status again to see the file 
+                            is no longer staged.
+                        </p>
+                        <div><kbd>git commit -m "meaningful message"</kbd></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-4">
+                <div class="card">
+                    <div id="push" class="card-header bg-info border-dark text-white pb-1">
+                        <h5 class="card-title">Push</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            After a commit has been made you will need to push this new version of your file 
+                            to the master branch on GitHub. To push the file use the push command. You will 
+                            receive some output from Git and the new version of your file and a new commit 
+                            will appear in your GitHub repo.
+                        </p>
+                        <div><kbd>git push</kbd></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="branches" class="container py-3 mb-4">
+            <h2 class="display-4">Branches</h2>
+            <p class="lead">
+                Coming soon...
+            </p>
     </section>
 
     <footer class="bg-dark text-white text-center py-3">
